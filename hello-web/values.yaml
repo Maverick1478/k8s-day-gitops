@@ -3,7 +3,7 @@ replicaCount: 3
 image:
   repository: nginxdemos/hello
   # Vide = on utilise appVersion de Chart.yaml. Jamais "latest".
-  tag: ""
+  tag: "0.4-plain-text"
   pullPolicy: IfNotPresent
 
 service:
