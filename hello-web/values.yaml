@@ -1,4 +1,4 @@
-replicaCount: 2
+replicaCount: 3
 
 image:
   repository: nginxdemos/hello
@@ -11,7 +11,7 @@ service:
   port: 80
 
 # Injectée dans la variable d'environnement GREETING du conteneur
-greeting: "Hello from Helm"
+greeting: "Bonjour depuis GitOps"
 
 resources:
   requests:
