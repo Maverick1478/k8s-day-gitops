@@ -1,0 +1,5 @@
+hello-web {{ .Chart.AppVersion }} est déployé (release "{{ .Release.Name }}", namespace "{{ .Release.Namespace }}").
+
+Pour l'ouvrir :
+  kubectl -n {{ .Release.Namespace }} port-forward svc/{{ include "hello-web.fullname" . }} 8081:{{ .Values.service.port }}
+  puis ouvrez http://localhost:8081

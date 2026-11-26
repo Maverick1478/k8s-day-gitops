@@ -1,0 +1,24 @@
+replicaCount: 2
+
+image:
+  repository: nginxdemos/hello
+  # Vide = on utilise appVersion de Chart.yaml. Jamais "latest".
+  tag: ""
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+# Injectée dans la variable d'environnement GREETING du conteneur
+greeting: "Hello from Helm"
+
+resources:
+  requests:
+    cpu: 10m
+    memory: 32Mi
+  limits:
+    memory: 64Mi
+
+probes:
+  enabled: true
